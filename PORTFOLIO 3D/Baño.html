@@ -1,363 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
-     
+<html lang="es">
 
 <head>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-
-    <title>Modern Business - Start Bootstrap Template</title>
+    <title>Modern Business - Portfolio</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap icons -->
+    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- CSS -->
+    <!-- CSS externo -->
     <link href="css/styles.css" rel="stylesheet" />
 
+    <style>
+        :root {
+            --claro: #F0F4F5;
+            --oscuro: #161319;
+            --lila: #9FA0C3;
+        }
+
+        body {
+            font-family: "Familjen Grotesk", sans-serif;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: var(--lila);
+            padding: 25px 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 40px;
+            color: var(--oscuro) !important;
+        }
+
+        .nav-link {
+            color: var(--oscuro) !important;
+            font-weight: 600;
+            margin-left: 25px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .dropdown-menu {
+            border: none;
+            border-radius: 15px;
+        }
+
+        .logo-nav {
+            width: 100px;
+            height: auto;
+        }
+
+        .navbar-toggler {
+            border-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(22,19,25,1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--lila);
+            padding: 25px 0;
+        }
+
+        .footer-contenido {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .redes a {
+            color: var(--oscuro);
+            font-size: 34px;
+            margin-left: 18px;
+        }
+
+        .footer-logo {
+            color: var(--oscuro);
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        .footer-logo:hover {
+            color: var(--oscuro);
+            text-decoration: none;
+        }
+    </style>
 </head>
-<style>
-
-    :root{
-
-    --claro:#F0F4F5;
-    --oscuro:#161319;
-    --lila:#9FA0C3;
-    }
-
-    body{
-    font-family: "Familjen Grotesk", sans-serif;
-}
-    /*****************************/
-/******** NAVBAR *************/
-/*****************************/
-
-.navbar{
-
-background:var(--lila);
-padding:25px 0;
-
-}
-
-.navbar-brand{
-
-font-weight:700;
-font-size:40px;
-color:var(--oscuro)!important;
-
-}
-
-.nav-link{
-
-color:var(--oscuro)!important;
-font-weight:600;
-margin-left:25px;
-font-size:14px;
-letter-spacing:1px;
-
-}
-
-.dropdown-menu{
-
-border:none;
-border-radius:15px;
-
-}
-
-.logo-nav{
-    width:100px;
-    height:auto;
-}
-.footer{
-
-    background: var(--lila);
-    padding:25px 0;
-
-}
-
-.footer-contenido{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-}
-
-.footer p{
-
-    margin:0;
-
-    font-size:30px;
-
-}
-
-.redes a{
-
-    color:var(--oscuro);
-
-    font-size:34px;
-
-    margin-left:18px;
-
-}
-
-.footer-logo{
-    color: var(--oscuro);
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 500;
-}
-
-.footer-logo:hover{
-    color: var(--oscuro);
-    text-decoration: none;
-}
-
-
-
-   </style>
 
 <body class="d-flex flex-column h-100">
 
 <main class="flex-shrink-0">
 
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
 
-<!-- Navigation-->
-            <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/assets/LOGOS WEB PEQUEÑO.png" alt="Logo Ana Sosa" class="logo-nav">
+            </a>
 
-<div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<a class="navbar-brand" href="index.html">
-    <img src="assets/LOGOS WEB PEQUEÑO.png" alt="Logo Ana Sosa" class="logo-nav">
-</a>
+            <div class="collapse navbar-collapse" id="menu">
 
-<button class="navbar-toggler"
+                <ul class="navbar-nav ms-auto">
 
-type="button"
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Portfolio
+                        </a>
 
-data-bs-toggle="collapse"
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/Fotografía copy.html">Fotografía</a></li>
+                            <li><a class="dropdown-item" href="/Video.html">Vídeo</a></li>
+                            <li><a class="dropdown-item" href="/Diseño gráfico.html">Diseño gráfico</a></li>
+                            <li><a class="dropdown-item" href="/3D.html">3D</a></li>
+                        </ul>
+                    </li>
 
-data-bs-target="#menu">
+                    <li class="nav-item"><a class="nav-link" href="/about.html">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blog-home.html">Blog</a></li>
 
-<span class="navbar-toggler-icon"></span>
+                </ul>
 
-</button>
+            </div>
+        </div>
+    </nav>
 
-<div class="collapse navbar-collapse" id="menu">
+    <!-- CONTENIDO -->
+    <section class="py-5">
+        <div class="container px-5 my-5">
 
-<ul class="navbar-nav ms-auto">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-6 text-center mb-5">
 
-<li class="nav-item dropdown">
+                    <h1 class="fw-bolder">Bodegón</h1>
 
-<a class="nav-link dropdown-toggle"
+                    <p class="lead fw-normal text-muted mb-3">
+                        Esta fue mi primera entrega de 3D, en la que el objetivo era crear un bodegón compuesto por un mínimo de cinco objetos para introducirnos en el modelado y la texturización de manera básica.
+                    </p>
 
-href="#"
-
-role="button"
-
-data-bs-toggle="dropdown">
-
-Portfolio
-
-</a>
-
-<ul class="dropdown-menu">
-
-<li><a class="dropdown-item" href="Fotografía copy.html">Fotografía</a></li>
-
-<li><a class="dropdown-item" href="Video.html">Vídeo</a></li>
-
-<li><a class="dropdown-item" href="Diseño gráfico.html">Diseño gráfico</a></li>
-
-<li><a class="dropdown-item" href="3D.html">3D</a></li>
-
-</ul>
-
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="about.html">Sobre mí</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="contact.html">Contacto</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="blog-home.html">Blog</a>
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</nav>
-
-
-
-<!-- Page Content -->
-
-
-<section class="py-5">
-
-
-    <div class="container px-5 my-5">
-
-
-        <!-- Texto -->
-
-        <div class="row gx-5 justify-content-center">
-
-
-            <div class="col-lg-6">
-
-
-                <div class="text-center mb-5">
-
-
-                    <h1 class="fw-bolder">
-                        Bodegón
-                    </h1>
-
-
-               <p class="lead fw-normal text-muted mb-0">
-    Esta fue mi primera entrega de 3D, en la que el objetivo era crear un bodegón compuesto por un mínimo de cinco objetos para introducirnos en el modelado y la texturización de manera básica.
-</p>
-
-<p class="lead fw-normal text-muted mb-0">
-    En mi caso, escogí representar un baño como escenario, creando desde cero elementos como la bañera, un pato de goma, el cepillo y la pasta de dientes, además de una estantería con diferentes botes y accesorios de baño. Con este proyecto pude experimentar con las primeras fases de creación de objetos 3D y la aplicación de materiales.
-</p>
+                    <p class="lead fw-normal text-muted mb-0">
+                        En mi caso, escogí representar un baño como escenario, creando desde cero elementos como la bañera, un pato de goma, el cepillo y la pasta de dientes, además de una estantería con diferentes botes y accesorios de baño.
+                    </p>
 
                 </div>
-
-
             </div>
 
-
-        </div>
-
-
-
-
-        <!-- Video + imagen -->
-
-
-        <div class="row gx-5">
-
-
-            <div class="col-12">
-
-
-                <div class="ratio ratio-16x9 mb-5">
-
-
-                    <iframe 
-
-                        src="https://player.vimeo.com/video/1204295587"
-
-                        title="Vimeo video"
-
-                        frameborder="0"
-
-                        allow="autoplay; fullscreen; picture-in-picture"
-
-                        allowfullscreen>
-
-                    </iframe>
-
-
+            <!-- VIDEO -->
+            <div class="row gx-5">
+                <div class="col-12">
+                    <div class="ratio ratio-16x9 mb-5">
+                        <iframe
+                            src="https://player.vimeo.com/video/1204295587"
+                            title="Vimeo video"
+                            allow="autoplay; fullscreen; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
 
-
+                <div class="col-lg-6">
+                    
+                </div>
             </div>
-
-
-
-            <div class="col-lg-6">
-
-
-                <img src="assets/images3d/no_soc_una_joguina.png" class="img-fluid">
-
-
-            </div>
-
-
 
         </div>
-
-
-    </div>
-
-
-</section>
-
+    </section>
 
 </main>
 
-
-
-
-<!-- Footer-->
-        <footer class="footer">
-
+<!-- FOOTER -->
+<footer class="footer">
     <div class="container">
-
         <div class="footer-contenido">
 
-            <a href="index.html" class="footer-logo">By.anasosa</a>
+            <a href="/index.html" class="footer-logo">By.anasosa</a>
 
             <div class="redes">
-
-                <a href="https://www.instagram.com/by.anasosa/">
+                <a href="https://www.instagram.com/by.anasosa/" target="_blank">
                     <i class="bi bi-instagram"></i>
                 </a>
 
-                <a href="https://www.linkedin.com/in/ana-laura-sosa-9657193b6/">
+                <a href="https://www.linkedin.com/in/ana-laura-sosa-9657193b6/" target="_blank">
                     <i class="bi bi-linkedin"></i>
                 </a>
-
             </div>
 
         </div>
-
     </div>
-
 </footer>
 
-
-
-
 <!-- Bootstrap JS -->
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-
-<!-- Theme JS -->
-
+<!-- JS externo -->
 <script src="js/scripts.js"></script>
 
-
 </body>
-
 </html>
